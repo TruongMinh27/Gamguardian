@@ -92,7 +92,7 @@ gg.loadResults(results)
 end
 
 function health(heroAdress)
-	filterAddress()
+	
 	gg.refineNumber(heroAdress,TYPE_FLOAT)
 	local count = gg.getResultsCount()
 	local results = gg.getResults(count)
@@ -113,7 +113,7 @@ gg.clearResults()
 end
 
 function hightDamge(heroAdress)
-	filterAddress()
+	
 	gg.refineNumber(heroAdress,TYPE_FLOAT)
 	local count = gg.getResultsCount()
 	local results = gg.getResults(count)
@@ -133,7 +133,7 @@ gg.clearResults()
 end
 
 function hightDamgeSKill(heroAdress)
-	filterAddress()
+	
 	gg.refineNumber(heroAdress,TYPE_FLOAT)
 	local count = gg.getResultsCount()
 	local results = gg.getResults(count)
@@ -153,7 +153,7 @@ gg.clearResults()
 end
 
 function hightCritial(heroAdress)
-	filterAddress()
+	
 	gg.refineNumber(heroAdress,TYPE_FLOAT)
 	local count = gg.getResultsCount()
 	local results = gg.getResults(count)
@@ -173,9 +173,13 @@ gg.clearResults()
 end
 
 function turnOn(hero)
+filterAddress()
 health(hero)
+filterAddress()
 hightDamge(hero)
+filterAddress()
 hightDamgeSKill(hero)
+filterAddress()
 hightCritial(hero)
 end
 
