@@ -80,11 +80,23 @@ for i, v in ipairs (results) do
 gg.loadResults(results)
 end
 
+function filterAddress64()
+gg.searchNumber("16,843,008",gg.TYPE_DWORD)
+local count = gg.getResultsCount()
+local results = gg.getResults(count)
+for i, v in ipairs (results) do
+	v.address = v.address + 0x1E4
+	v.flags = gg.TYPE_FLOAT
+	end
+gg.loadResults(results)
+end
+
 function health(heroAdress)
 	filterAddress()
 	gg.refineNumber(heroAdress,TYPE_FLOAT)
 	local count = gg.getResultsCount()
 	local results = gg.getResults(count)
+	
 for i, v in ipairs (results) do
 	v.address = v.address + 0x8
 	v.flags = gg.TYPE_FLOAT
