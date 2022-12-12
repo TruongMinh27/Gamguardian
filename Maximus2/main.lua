@@ -9,6 +9,7 @@ menu = gg.choice({
 'SCARLETT',
 'OTUS',
 'JULIUS',
+'LERATTE',
 ------ MORE OPTIONS CAN BE ADDED LIKE THIS ------
 'Thoát'},
 nil,'NORMAL CHOICE SCRIPT')
@@ -19,8 +20,9 @@ if menu == 4 then a4() end
 if menu == 5 then a5() end
 if menu == 6 then a6() end
 if menu == 7 then a7() end
+if menu == 8 then a8() end
 ------ MORE OPTIONS CAN BE ADDED LIKE THIS ------
-if menu == 8 then Exit() end
+if menu == 9 then Exit() end
 XGCK=-1
 end
 
@@ -58,6 +60,11 @@ end
 function a7()
 julius = 1.10000002384
 turnOn(julius)
+end
+
+function a8()
+leratte = 0.94999998808
+turnOn(leratte)
 end
 
 
