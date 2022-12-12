@@ -31,40 +31,50 @@ end
 function a1()
 penRose = 0.85000002384
 turnOn(penRose)
+turnOn64(penRose)
+
 end
 
 function a2()
 shishima = 0.80000001192
 turnOn(shishima)
+	turnOn64(shishima)
+
 end
 
 function a3()
 roland = 0.89999997616
 turnOn(roland)
+	turnOn64(roland)
 end
 
 function a4()
 bishop = 0.85000002384
 turnOn(bishop)
+	turnOn64(bishop)
 end
 function a5()
 scarlett = 0.75
 turnOn(scarlett)
+	turnOn64(scarlett)
 end
 
 function a6()
 otus = 1
 turnOn(otus)
+	turnOn64(otus)
 end
 
 function a7()
 julius = 1.10000002384
 turnOn(julius)
+	turnOn64(julius)
 end
 
 function a8()
 leratte = 0.94999998808
 turnOn(leratte)
+	turnOn64(leratte)
 end
 
 
@@ -183,6 +193,16 @@ filterAddress()
 hightCritial(hero)
 end
 
+function turnOn64(hero)
+filterAddress64()
+health(hero)
+filterAddress64()
+hightDamge64(hero)
+filterAddress64()
+hightDamgeSKill64(hero)
+filterAddress64()
+hightCritial(hero)
+end
 
 
 
