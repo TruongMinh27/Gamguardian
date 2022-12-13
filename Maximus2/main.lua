@@ -201,6 +201,25 @@ for i, v in ipairs (noCoolDown) do
 gg.addListItems(noCoolDown)
 gg.clearResults()
 end
+function noCoolDown64(heroAdress)
+	
+	gg.refineNumber(heroAdress,TYPE_FLOAT)
+	local count = gg.getResultsCount()
+	local results = gg.getResults(count)
+for i, v in ipairs (results) do
+	v.address = v.address + 0x32C
+	v.flags = gg.TYPE_FLOAT
+	end
+	gg.loadResults(results)
+	local count = gg.getResultsCount()
+	local noCoolDown = gg.getResults(count)
+for i, v in ipairs (noCoolDown) do
+	v.value = '20'
+	v.freeze = true
+	end
+gg.addListItems(noCoolDown)
+gg.clearResults()
+end
 
 
 
@@ -228,7 +247,7 @@ hightDamgeSKill(hero)
 filterAddress64()
 hightCritial(hero)
 filterAddress64()
-noCoolDown1(hero)
+noCoolDown64(hero)
 
 end
 
