@@ -12,7 +12,7 @@ menu = gg.choice({
 'LERATTE',
 ------ MORE OPTIONS CAN BE ADDED LIKE THIS ------
 'Thoát'},
-nil,'NORMAL CHOICE SCRIPT')
+nil,'Maximus 2 ✅ God Mode - Hight Dame - No CD')
 if menu == 1 then a1() end
 if menu == 2 then a2() end
 if menu == 3 then a3() end
@@ -182,6 +182,28 @@ gg.addListItems(hightCritial)
 gg.clearResults()
 end
 
+function noCoolDown1(heroAdress)
+	
+	gg.refineNumber(heroAdress,TYPE_FLOAT)
+	local count = gg.getResultsCount()
+	local results = gg.getResults(count)
+for i, v in ipairs (results) do
+	v.address = v.address + 0x294
+	v.flags = gg.TYPE_FLOAT
+	end
+	gg.loadResults(results)
+	local count = gg.getResultsCount()
+	local noCoolDown = gg.getResults(count)
+for i, v in ipairs (noCoolDown) do
+	v.value = '20'
+	v.freeze = true
+	end
+gg.addListItems(noCoolDown)
+gg.clearResults()
+end
+
+
+
 function turnOn(hero)
 filterAddress()
 health(hero)
@@ -191,6 +213,9 @@ filterAddress()
 hightDamgeSKill(hero)
 filterAddress()
 hightCritial(hero)
+filterAddress()
+noCoolDown1(hero)
+
 end
 
 function turnOn64(hero)
@@ -202,6 +227,9 @@ filterAddress64()
 hightDamgeSKill(hero)
 filterAddress64()
 hightCritial(hero)
+filterAddress64()
+noCoolDown1(hero)
+
 end
 
 
