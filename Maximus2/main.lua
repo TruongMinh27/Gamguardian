@@ -84,7 +84,7 @@ gg.searchNumber("16,843,008",gg.TYPE_DWORD)
 local count = gg.getResultsCount()
 local results = gg.getResults(count)
 for i, v in ipairs (results) do
-	v.address = v.address + 0x1C0
+	v.address = v.address + 0x1C4
 	v.flags = gg.TYPE_FLOAT
 	end
 gg.loadResults(results)
